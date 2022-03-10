@@ -26,6 +26,7 @@ burgerMenu()
 getPartners()
 getEducation()
 
+// Эта часть для gitHub page. Для корректной сборки должна быть закомментирована
 // var ghpages = require('gh-pages');
 
 // ghpages.publish(dir, callback);
