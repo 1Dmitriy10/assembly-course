@@ -26,8 +26,8 @@ burgerMenu()
 getPartners()
 getEducation()
 
-var ghpages = require('gh-pages');
+// var ghpages = require('gh-pages');
 
-ghpages.publish(dir, callback);
+// ghpages.publish(dir, callback);
 
 
