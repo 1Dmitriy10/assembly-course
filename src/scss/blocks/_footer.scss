@@ -1,0 +1,114 @@
+// ===================================================Миксины=============================================
+
+//адаптивное св-во
+@mixin adaptiveValue($property, $startSize, $minSize) {
+    $addSize: $startSize - $minSize;
+    // Ширина полотна макета
+    $maxWidth: 1920;
+    #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+}
+.footer {
+    min-height: 649px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-image: url("../img/about/bg.png");
+}
+.footer__wrap {
+    min-height: 419px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media (max-width: 550px) {
+        width: 300px;
+    }
+}
+.footer__title {
+    @include title;
+    @media (max-width: 450px) {
+        font-size: 35px;
+        text-align: center;
+    }
+}
+.footer__subtitle {
+    font-weight: normal;
+    @include adaptiveValue(font-size, 16, 12);
+    line-height: 160%;
+    text-align: center;
+    color: #ffffff;
+    opacity: 0.5;
+    width: 411px;
+    padding: 30px 0 60px 0;
+    @media (max-width: 450px) {
+        width: 300px;
+    }
+}
+.footer__input-box {
+    position: relative;
+    width: 492px;
+    padding-bottom: 40px;
+    @media (max-width: 550px) {
+        width: 350px;
+        display: flex;
+        justify-content: center;
+    }
+}
+.footer__input {
+    display: flex;
+    width: 353px;
+    height: 44px;
+    background: #ffffff;
+    opacity: 0.25;
+    border-radius: 50px 0px 0px 50px;
+    padding: 11px 30px 11px 30px;
+    &::placeholder {
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 160%;
+        color: #000000;
+        opacity: 0.8;
+    }
+    @media (max-width: 550px) {
+        width: 200px;
+    }
+}
+.btn--p {
+    position: absolute;
+    top: 2px;
+    right: 3px;
+    @media (max-width: 500px) {
+        width: 90px;
+        right: 15%;
+        height: 51px;
+        top: 0;
+        font-size: 12px;
+    }
+}
+.footer__social-box {
+    display: flex;
+    width: 290px;
+    justify-content: space-between;
+}
+.footer__social-item {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(94.26deg, #c89afc 9.51%, #7c6afa 90.23%);
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.4s;
+    &:hover {
+        transform: scale(120%);
+    }
+}
+.footer__info-text {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 160%;
+    text-align: center;
+    color: #ffffff;
+    opacity: 0.8;
+    padding-top: 50px;
+}
