@@ -7,5 +7,6 @@ import { getPartnersLogo } from "./partnersLogo.js";
 import { getEducation } from "./updateEducation.js";
 import { swiper } from "./slider.js";
 import { goUp } from "./goToUp.js";
+import { isWebp } from "./isWebp.js";
 
 
