@@ -1,4 +1,4 @@
-import img from "../img/teachers/teachers-logo.svg"
+import img from "./img/teachers/teachers-logo.svg"
 
 export function getTeachersLogo() {
     const logo = document.querySelector('.teacher__logo ');
